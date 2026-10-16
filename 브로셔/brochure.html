@@ -129,6 +129,60 @@ th{width:24mm;font-weight:700;color:var(--ink)}td{color:#3d3d3a}
 .faq .q b{font-size:10.5pt;font-weight:800;display:flex;gap:3mm;letter-spacing:-.02em}
 .faq .q b:before{content:"Q";color:var(--ink);background:var(--lime);width:6mm;height:6mm;display:inline-flex;align-items:center;justify-content:center;font-size:8pt;flex:none}
 .faq .q p{font-size:9.2pt;line-height:1.75;color:#4a4a46;margin:2.5mm 0 0 9mm}
+
+/* v3 compact */
+.c .eyebrow{margin-top:10mm}
+.c h1{font-size:23pt;margin-top:4mm}
+.c .lead{font-size:9.3pt;margin-top:4mm;line-height:1.7}
+.c table th,.c table td{font-size:8.8pt;padding:2.8mm 0}
+.c .vals{margin-top:9mm;gap:5mm}
+.c .val h3{font-size:11.5pt;margin:2mm 0}
+.c .val p{font-size:8.4pt;line-height:1.65}
+.c .cmp{margin-top:9mm}
+.c .cmp .h,.c .cmp .r{padding:3mm 0;font-size:8.6pt;line-height:1.5}
+.c .ai{margin-top:0;padding:7mm 8mm;grid-template-columns:1fr;gap:3mm;height:100%}
+.c .ai b{font-size:13pt}.c .ai p{font-size:8.6pt}
+.c .ov{margin-top:8mm;grid-template-columns:1.15fr 1fr;gap:8mm;align-items:stretch}
+.svc.v3 img{aspect-ratio:9/14;object-position:50% 30%}
+.svc.v3{margin-top:8mm}
+.svc.v3 h3{font-size:10.5pt}.svc.v3 p{font-size:8pt}
+.c .scope{margin-top:6mm}.c .scope .r{padding:3mm 0;font-size:8.6pt}
+.mp{margin-top:7mm;background:var(--ink);color:#f6f5f1;padding:8mm 9mm}
+.mp .t{display:flex;justify-content:space-between;align-items:baseline;border-bottom:.3mm solid #444;padding-bottom:3mm}
+.mp .t b{font-size:12.5pt;font-weight:800;letter-spacing:-.02em}.mp .t small{font-size:7pt;letter-spacing:.2em;color:var(--lime);font-weight:700}
+.mp .g{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm;margin-top:5mm}
+.mp .g i{font-style:normal;font-size:7pt;color:var(--lime);font-weight:700;letter-spacing:.14em}
+.mp .g h4{font-size:10pt;font-weight:800;margin:1.5mm 0}.mp .g p{font-size:7.9pt;line-height:1.6;color:#c2c1b8}
+.mp .f{margin-top:5mm;background:var(--lime);color:var(--ink);padding:3.2mm 5mm;font-size:9.5pt;font-weight:800}
+/* export page */
+.ex .pil{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:11mm}
+.ex .pil .p{border-top:.5mm solid var(--lime);padding-top:4mm}
+.ex .pil i{font-style:normal;font-size:7.5pt;color:var(--lime);font-weight:700;letter-spacing:.14em}
+.ex .pil h3{font-size:12.5pt;font-weight:800;margin:2mm 0;letter-spacing:-.03em;line-height:1.35}
+.ex .pil p{font-size:8.6pt;line-height:1.7;color:#c8c7bf}
+.ex .imgs{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:5mm;margin-top:10mm}
+.ex .imgs img{width:100%;height:58mm;object-fit:cover;display:block}
+.ex .imgs .pos1{object-position:50% 25%}.ex .imgs .pos2{object-position:50% 35%}
+.ex .imgs .w{background:var(--lime);color:var(--ink);padding:6mm 6mm;display:flex;flex-direction:column;justify-content:space-between;height:58mm}
+.ex .imgs .w small{font-size:7pt;letter-spacing:.18em;font-weight:700}
+.ex .imgs .w b{font-size:11.5pt;font-weight:800;line-height:1.45;letter-spacing:-.03em}
+.ex .fl{display:grid;grid-template-columns:repeat(4,1fr);margin-top:10mm;border-top:.3mm solid #555}
+.ex .fl div{padding:5mm 4mm 0 0;font-size:8.4pt;line-height:1.55;color:#c8c7bf}
+.ex .fl b{display:block;color:#fff;font-size:10pt;margin:1.5mm 0 1mm}.ex .fl i{font-style:normal;color:var(--lime);font-size:7.5pt;font-weight:700;letter-spacing:.14em}
+.ex .fit{margin-top:9mm;display:grid;grid-template-columns:auto 1fr;gap:7mm;border:.3mm solid #555;padding:6mm 8mm}
+.ex .fit b{font-size:11pt;font-weight:800;line-height:1.5;color:var(--lime)}
+.ex .fit ul{list-style:none;font-size:8.8pt;line-height:1.85;color:#d9d8d0}.ex .fit li:before{content:"— ";color:var(--lime)}
+.ex .note2{margin-top:6mm;font-size:8pt;color:#9a9990;line-height:1.6}
+/* last page */
+.lp .wk{margin-top:6mm;gap:5mm 5mm}
+.lp .wk img{aspect-ratio:16/7.2}
+.lp .wk h3{font-size:10.5pt;margin:.8mm 0}.lp .wk p{font-size:8pt;line-height:1.5}.lp .wk i{margin-top:2.2mm}
+.lp .note{margin-top:4mm;font-size:7.2pt}
+.lp .card{margin-top:6mm;padding:7mm 10mm}.lp .card h2{font-size:17pt}.lp .card .mail{font-size:12pt;margin-top:3mm}.lp .card .co{margin-top:4mm;padding-top:3mm}
+.lp .card .q{width:26mm;height:26mm}
+.stp{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:6mm}
+.stp div{border-top:.5mm solid var(--ink);padding-top:3mm;font-size:8pt;line-height:1.55;color:#4a4a46}
+.stp b{display:block;font-size:10pt;color:var(--ink);margin:1mm 0 .5mm;font-weight:800}.stp i{font-style:normal;font-size:7pt;letter-spacing:.14em;font-weight:700;color:var(--mute)}
 </style>
 </head>
 <body>
@@ -148,66 +202,26 @@ th{width:24mm;font-weight:700;color:var(--ink)}td{color:#3d3d3a}
   </div>
 </section>
 
-<!-- 02 INTRO -->
-<section class="page">
-  <div class="hd"><b>THE K</b><span>CONTENTS &amp; BRAND INTRODUCTION</span></div>
+<!-- 02 ABOUT -->
+<section class="page c">
+  <div class="hd"><b>THE K</b><span>01 / ABOUT &amp; WHY THE K</span></div>
   <div class="eyebrow">ABOUT THE K</div>
-  <h1>좋은 광고는<br>브랜드를 이해하는 데서 시작합니다.</h1>
-  <p class="lead">THE K는 브랜드 전략과 생성형 AI 기술을 바탕으로 영상·광고 콘텐츠를 제작하고, 광고 집행까지 연결하는 크리에이티브 파트너입니다. 만드는 일에서 멈추지 않고, 고객에게 닿는 일까지 책임집니다.</p>
-  <div class="quote">
-    <p>YOUR PROBLEM.<br><em>OUR SOLUTION.</em></p>
-    <small>브랜드의 고민을 기획, 콘텐츠, 광고로 연결합니다.<br>상상은 넓게, 실행은 구체적으로.</small>
-  </div>
-  <ul class="toc">
-    <li><i>01</i>회사 개요 · 핵심 가치 · 차별점<span>COMPANY</span></li>
-    <li><i>02</i>사업 영역 · 수출 지원<span>SERVICES</span></li>
-    <li><i>03</i>미디어 운영 · 업무 프로세스 · 프로젝트 유형<span>PROCESS</span></li>
-    <li><i>04</i>팀 참여 프로젝트<span>EXPERIENCE</span></li>
-    <li><i>05</i>자주 묻는 질문 · 연락처<span>FAQ &amp; CONTACT</span></li>
-  </ul>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>02 / 11</span></div>
-</section>
-
-<!-- 03 COMPANY -->
-<section class="page">
-  <div class="hd"><b>THE K</b><span>01 / COMPANY</span></div>
-  <div class="eyebrow">COMPANY OVERVIEW</div>
-  <h1>전략이 먼저,<br>기술은 그 다음입니다.</h1>
+  <h1>좋은 광고는 브랜드를 이해하는 데서,<br>좋은 결과는 끝까지 연결하는 데서.</h1>
+  <p class="lead">THE K는 브랜드 전략과 생성형 AI 기술을 바탕으로 영상·광고 콘텐츠를 제작하고, 광고 집행까지 연결하는 크리에이티브 파트너입니다. VFX·버추얼 프로덕션·브랜드 광고 현장에서 쌓은 팀의 경험에 AI 제작 방식을 더해, 목적에 맞는 결과물을 효율적으로 만듭니다.</p>
   <div class="ov">
     <table>
       <tr><th>상호</th><td>주식회사 THE-K (THE K)</td></tr>
-      <tr><th>사업 분야</th><td>영상·광고 콘텐츠 기획 및 제작<br>광고 집행·운영<br>다국어 콘텐츠 · 수출 마케팅 연계</td></tr>
-      <tr><th>소재지</th><td>인천광역시 연수구 송도미래로 30<br>D동 610호</td></tr>
+      <tr><th>사업 분야</th><td>영상·광고 콘텐츠 기획 및 제작 / 광고 집행·운영<br>다국어 콘텐츠 · 수출 마케팅 연계</td></tr>
+      <tr><th>소재지</th><td>인천광역시 연수구 송도미래로 30 D동 610호</td></tr>
       <tr><th>이메일</th><td>hello@thekplan.net</td></tr>
       <tr><th>웹사이트</th><td>thekplan.net</td></tr>
     </table>
-    <div>
-      <p class="lead" style="margin-top:0;font-size:9pt">THE K는 영상 제작과 광고 운영을 따로 맡기지 않아도 되도록, 기획부터 집행·개선까지를 하나의 흐름으로 설계합니다. VFX·버추얼 프로덕션·브랜드 광고 현장에서 쌓은 팀의 경험에 생성형 AI 제작 방식을 더해, 목적에 맞는 결과물을 효율적으로 만듭니다.</p>
-    </div>
+    <div class="ai"><b>AI는 도구,<br>전략은 사람의 몫.</b><p>AI는 표현의 가능성을 넓히고 제작을 돕는 도구입니다. 무엇을 만들지, 누구에게 전할지에 대한 전략과 최종 판단은 THE K의 기획자와 제작진이 맡습니다.</p></div>
   </div>
   <div class="vals">
     <div class="val"><i>VALUE 01</i><h3>브랜드 이해</h3><p>고객의 사업과 상품, 타깃의 관심사를 먼저 살펴 브랜드가 해결해야 할 과제를 찾습니다.</p></div>
     <div class="val"><i>VALUE 02</i><h3>크리에이티브</h3><p>전달할 핵심과 표현 방식을 정하고, 광고 콘셉트와 스토리보드로 구체화합니다.</p></div>
     <div class="val"><i>VALUE 03</i><h3>성과로의 연결</h3><p>매체별 소재 제작에서 광고 운영, 결과 검토까지 이어 목적에 맞게 개선합니다.</p></div>
-  </div>
-  <div class="ai">
-    <b>AI는 도구,<br>전략은 사람의 몫.</b>
-    <p>AI는 표현의 가능성을 넓히고 제작을 돕는 도구입니다. 무엇을 만들지, 누구에게 전할지에 대한 전략과 최종 판단은 THE K의 기획자와 제작진이 맡습니다.</p>
-  </div>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>03 / 11</span></div>
-</section>
-
-<!-- WHY -->
-<section class="page">
-  <div class="hd"><b>THE K</b><span>01 / WHY THE K</span></div>
-  <div class="eyebrow">WHY THE K</div>
-  <h1>제작 따로, 광고 따로가 아닌<br>하나의 흐름으로.</h1>
-  <p class="lead">영상은 만들었는데 어디에 어떻게 내보낼지 막막했던 경험, 광고는 돌리는데 소재가 매체에 맞지 않았던 경험. THE K는 그 사이의 간격을 없애는 데서 출발했습니다.</p>
-  <div class="vals" style="grid-template-columns:1fr 1fr;gap:9mm 8mm;margin-top:13mm">
-    <div class="val"><i>STRENGTH 01</i><h3>전략이 먼저</h3><p>제작에 들어가기 전, 사업과 상품·타깃을 먼저 이해하고 메시지를 정리합니다. 만드는 이유가 분명해야 결과물도 분명합니다.</p></div>
-    <div class="val"><i>STRENGTH 02</i><h3>제작부터 집행까지 원스톱</h3><p>콘텐츠 제작과 광고 운영을 한 팀이 이어서 맡아, 소재 규격·매체 특성에 맞는 결과물을 처음부터 설계합니다.</p></div>
-    <div class="val"><i>STRENGTH 03</i><h3>생성형 AI의 효율</h3><p>AI를 제작 도구로 활용해 표현의 폭을 넓히고, 다국어·다규격 소재를 효율적으로 만듭니다.</p></div>
-    <div class="val"><i>STRENGTH 04</i><h3>현장에서 쌓은 경험</h3><p>VFX, 버추얼 프로덕션, 브랜드 광고, 실감형 콘텐츠 등 다양한 현장에 참여한 팀의 경험이 바탕입니다.</p></div>
   </div>
   <div class="cmp">
     <div class="h"><span>구분</span><span>제작·광고를 따로 맡길 때</span><b>THE K와 함께할 때</b></div>
@@ -215,132 +229,82 @@ th{width:24mm;font-weight:700;color:var(--ink)}td{color:#3d3d3a}
     <div class="r"><b>소재</b><span>제작 후 매체 규격에 맞춰 재가공</span><em>기획 단계부터 매체별로 설계</em></div>
     <div class="r"><b>개선</b><span>광고 반응이 제작에 전달되기 어려움</span><em>분석 결과를 다음 소재에 반영</em></div>
   </div>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>04 / 11</span></div>
+  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>02 / 05</span></div>
 </section>
 
-<!-- 04 SERVICES -->
-<section class="page">
-  <div class="hd"><b>THE K</b><span>02 / SERVICES</span></div>
+<!-- 03 SERVICES -->
+<section class="page c">
+  <div class="hd"><b>THE K</b><span>02 / SERVICES &amp; MEDIA</span></div>
   <div class="eyebrow">BUSINESS AREAS</div>
-  <h1>목적에 맞는 콘텐츠,<br>매체에 맞는 표현.</h1>
-  <div class="svc">
-    <div><img src="assets/train.jpg" alt=""><i>BRAND FILM</i><h3>브랜드 필름</h3><p>브랜드의 이야기와 메시지를 기억에 남는 영상으로.</p></div>
-    <div><img src="assets/product.jpg" alt=""><i>PRODUCT AD</i><h3>제품 광고</h3><p>제품의 특징과 사용 경험을 설득력 있는 장면으로.</p></div>
-    <div><img src="assets/beauty.jpg" alt=""><i>SHORT-FORM</i><h3>숏폼·SNS 광고</h3><p>짧은 시간에 시선을 끄는 플랫폼별 광고 소재로.</p></div>
-    <div><img src="assets/model.jpg" alt=""><i>MULTILINGUAL</i><h3>다국어 AI 콘텐츠</h3><p>AI 모델·대사·자막을 목표 시장에 맞는 표현으로.</p></div>
+  <h1>목적에 맞는 콘텐츠, 매체에 맞는 표현.<br>만든 콘텐츠가 고객에게 닿도록.</h1>
+  <div class="svc v3">
+    <div><img src="assets/hero.jpg" style="object-position:47% 50%" alt=""><i>BRAND FILM</i><h3>브랜드 필름</h3><p>브랜드의 이야기와 메시지를 기억에 남는 영상으로.</p></div>
+    <div><img src="assets/product.jpg" style="object-position:50% 40%" alt=""><i>PRODUCT AD</i><h3>제품 광고</h3><p>제품의 특징과 사용 경험을 설득력 있는 장면으로.</p></div>
+    <div><img src="assets/beauty.jpg" style="object-position:50% 40%" alt=""><i>SHORT-FORM</i><h3>숏폼·SNS 광고</h3><p>짧은 시간에 시선을 끄는 플랫폼별 광고 소재로.</p></div>
+    <div><img src="assets/model.jpg" style="object-position:50% 20%" alt=""><i>MULTILINGUAL</i><h3>다국어 AI 콘텐츠</h3><p>AI 모델·대사·자막을 목표 시장에 맞는 표현으로.</p></div>
   </div>
   <div class="scope">
     <div class="r"><b>기획</b><span>브랜드·상품·타깃 분석, 광고 콘셉트 및 메시지 설계, 스토리보드 구성</span></div>
     <div class="r"><b>제작</b><span>브랜드 필름, 제품 영상, 숏폼 소재 제작 / 생성형 AI 기반 비주얼·모델·다국어 콘텐츠 제작</span></div>
     <div class="r"><b>광고 집행·운영</b><span>목표·타깃 설정, 매체 및 소재 설계, 캠페인 운영, 지표 분석과 개선</span></div>
   </div>
-  <div class="export">
-    <small>EXPORT SUPPORT</small>
-    <h3>해외 고객에게 알리는 일부터,<br>상품을 보내는 일까지.</h3>
-    <p>수출을 준비하는 기업에는 다국어 홍보 콘텐츠와 해외 타깃 광고, 국제운송·물류 상담을 연계합니다. 상품과 목적지에 맞춰 범위를 검토합니다.</p>
-    <u>다국어 콘텐츠 제작 · 해외 타깃 광고 · 수출 물류 연계</u>
+  <div class="mp">
+    <div class="t"><b>광고 목적과 타깃, 매체 특성에 맞춰 캠페인을 설계합니다.</b><small>MEDIA OPERATION</small></div>
+    <div class="g">
+      <div><i>STEP 01</i><h4>목표와 타깃 설정</h4><p>인지도·상품 관심·상담 문의 등 목적과 전달 대상을 정합니다.</p></div>
+      <div><i>STEP 02</i><h4>매체와 소재 설계</h4><p>타깃과 예산에 맞는 매체를 검토하고 영상·문구·규격을 구성합니다.</p></div>
+      <div><i>STEP 03</i><h4>캠페인 집행·운영</h4><p>일정과 예산에 따라 운영하며 소재별 반응을 확인합니다.</p></div>
+      <div><i>STEP 04</i><h4>분석과 개선</h4><p>목적에 맞는 지표로 결과를 검토해 다음 소재에 반영합니다.</p></div>
+    </div>
+    <div class="f">기획 → 제작 → 집행 → 분석 → 개선 &nbsp;·&nbsp; 콘텐츠와 광고 운영을 하나의 흐름으로</div>
   </div>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>05 / 11</span></div>
+  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>03 / 05</span></div>
 </section>
 
-<!-- 05 MEDIA -->
-<section class="page dark">
-  <div class="hd"><b>THE K</b><span>03 / MEDIA &amp; OPTIMIZATION</span></div>
-  <div class="eyebrow">MEDIA OPERATION</div>
-  <h1>만든 콘텐츠가<br>고객에게 닿도록.</h1>
-  <p class="lead">광고 목적과 타깃, 매체 특성을 고려해 캠페인을 설계합니다. 집행 후에는 반응을 살펴 소재와 운영 방향을 함께 조정합니다.</p>
-  <div class="steps">
-    <div class="step"><i>STEP 01</i><h3>목표와 타깃 설정</h3><p>브랜드 인지도, 상품 관심, 상담 문의 등 캠페인의 목적과 전달 대상을 정합니다.</p></div>
-    <div class="step"><i>STEP 02</i><h3>매체와 소재 설계</h3><p>타깃과 예산에 맞는 매체를 검토하고, 노출 환경에 맞게 영상·문구·규격을 구성합니다.</p></div>
-    <div class="step"><i>STEP 03</i><h3>캠페인 집행·운영</h3><p>일정과 예산에 따라 광고를 운영하고, 집행 현황과 소재별 반응을 확인합니다.</p></div>
-    <div class="step"><i>STEP 04</i><h3>분석과 개선</h3><p>목적에 맞는 지표로 결과를 검토하고, 다음 소재와 운영 방향에 반영합니다.</p></div>
+<!-- 04 EXPORT -->
+<section class="page dark ex c">
+  <div class="hd"><b>THE K</b><span>03 / EXPORT SUPPORT</span></div>
+  <div class="eyebrow">EXPORT SUPPORT</div>
+  <h1>해외 고객에게 알리는 일부터,<br>상품을 보내는 일까지.</h1>
+  <p class="lead">수출을 준비하는 기업은 해외 고객에게 알릴 콘텐츠, 해외 타깃 광고, 상품을 보내는 물류까지 여러 창구를 따로 찾아야 합니다. THE K는 홍보 콘텐츠와 광고, 국제운송·물류 상담을 하나의 흐름으로 연계해 그 부담을 줄입니다.</p>
+  <div class="pil">
+    <div class="p"><i>PILLAR 01</i><h3>다국어 콘텐츠 제작</h3><p>AI 모델·대사·자막을 목표 시장의 언어와 표현에 맞춰 제작합니다. 하나의 기획으로 시장별 버전을 확장할 수 있습니다.</p></div>
+    <div class="p"><i>PILLAR 02</i><h3>해외 타깃 광고</h3><p>목표 시장과 타깃, 매체 특성을 고려해 캠페인을 설계하고, 집행 후 반응을 보며 소재와 운영 방향을 조정합니다.</p></div>
+    <div class="p"><i>PILLAR 03</i><h3>수출 물류 연계</h3><p>상품의 특성과 목적지에 맞춰 국제운송·물류 상담을 연계합니다. 홍보와 물류를 한 곳에서 상의할 수 있습니다.</p></div>
   </div>
-  <div class="chips"><span>브랜드 인지도</span><span>상품 관심 유도</span><span>상담·문의 확보</span><span>해외 타깃 광고</span></div>
-  <div class="flow"><b>기획 → 제작 → 집행 → 분석 → 개선</b><p>콘텐츠와 광고 운영을 하나의 흐름으로 설계합니다.</p></div>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>06 / 11</span></div>
+  <div class="imgs">
+    <img class="pos1" src="assets/model.jpg" alt="">
+    <img class="pos2" src="assets/product.jpg" alt="">
+    <div class="w"><small>ONE FLOW</small><b>알리는 일과 보내는 일을<br>따로 고민하지 않도록.</b></div>
+  </div>
+  <div class="fl">
+    <div><i>STEP 01</i><b>상담·범위 검토</b>상품과 목표 시장, 수출 단계를 확인합니다.</div>
+    <div><i>STEP 02</i><b>콘텐츠 제작</b>시장에 맞는 다국어 홍보 콘텐츠를 만듭니다.</div>
+    <div><i>STEP 03</i><b>해외 타깃 광고</b>목표 고객에게 닿도록 광고를 운영합니다.</div>
+    <div><i>STEP 04</i><b>물류 상담 연계</b>상품과 목적지에 맞는 운송·물류를 상담합니다.</div>
+  </div>
+  <div class="fit"><b>이런 기업께<br>권해드립니다</b><ul><li>수출을 처음 준비하며 어디서부터 시작할지 막막한 기업</li><li>해외 고객에게 제품을 알릴 영상·광고 소재가 필요한 기업</li><li>홍보와 물류 상담 창구를 줄이고 싶은 기업</li></ul></div>
+  <p class="note2">※ 지원 범위는 상품과 목적지에 따라 달라지며, 상담 후 검토하여 안내드립니다.</p>
+  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>04 / 05</span></div>
 </section>
 
-<!-- 06 PROCESS -->
-<section class="page">
-  <div class="hd"><b>THE K</b><span>03 / WORK PROCESS</span></div>
-  <div class="eyebrow">HOW WE WORK</div>
-  <h1>상담부터 개선까지,<br>단계마다 함께 확인합니다.</h1>
-  <p class="lead">프로젝트의 규모와 목적에 따라 필요한 범위만 선택해 진행할 수 있습니다. 각 단계의 결과물은 고객과 함께 확인한 뒤 다음 단계로 넘어갑니다.</p>
-  <div class="ct" style="margin-top:14mm">
-    <div class="r"><i>01</i><b>상담</b><span>브랜드 · 상품 · 목표 · 일정 · 예산을 확인하고 현재 단계를 파악합니다.</span></div>
-    <div class="r"><i>02</i><b>기획</b><span>콘셉트와 핵심 메시지를 정하고, 제작 및 운영 범위를 협의합니다.</span></div>
-    <div class="r"><i>03</i><b>제작</b><span>스토리보드를 확정하고 영상 및 매체별 광고 소재를 제작합니다.</span></div>
-    <div class="r"><i>04</i><b>집행·검토</b><span>캠페인을 운영하며 결과를 검토하고, 개선 방향을 함께 논의합니다.</span></div>
-  </div>
-  <div class="vals" style="margin-top:14mm">
-    <div class="val"><i>WHEN</i><h3>이런 경우에</h3><p>신제품 출시, 브랜드 리뉴얼, 온라인 광고 시작, 해외 시장 진출을 준비할 때.</p></div>
-    <div class="val"><i>WHAT</i><h3>이런 결과물을</h3><p>브랜드 필름, 제품 광고, 숏폼·SNS 소재, 다국어 콘텐츠, 캠페인 운영 보고.</p></div>
-    <div class="val"><i>HOW</i><h3>이런 방식으로</h3><p>전담 기획자와 제작진이 단계별로 협의하며, 필요한 범위부터 유연하게 시작합니다.</p></div>
-  </div>
-  <div class="quote" style="margin-top:12mm;padding:9mm 12mm"><p>기획 → 제작 → 집행 → <em>개선</em></p><small>콘텐츠와 광고 운영을 하나의 흐름으로 설계하므로, 제작 따로 · 광고 따로 맡길 때 생기는 소통 비용과 메시지 불일치를 줄일 수 있습니다.</small></div>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>07 / 11</span></div>
-</section>
-
-<!-- CASES -->
-<section class="page">
-  <div class="hd"><b>THE K</b><span>03 / PROJECT TYPES</span></div>
-  <div class="eyebrow">PROJECT TYPES</div>
-  <h1>이런 고민이라면,<br>이렇게 시작합니다.</h1>
-  <p class="lead">아래는 자주 문의하시는 상황별 진행 방향의 예시입니다. 실제 범위와 일정은 상담 후 프로젝트에 맞춰 제안드립니다.</p>
-  <div class="cases">
-    <div class="case"><div><i>CASE A</i><h3>신제품 출시</h3></div><div><p>출시 시점에 맞춰 제품의 특징과 사용 경험을 전달하는 제품 광고 영상과, SNS·숏폼 소재를 함께 제작합니다. 출시 직후 광고 운영까지 이어 초기 반응을 확인합니다.</p><div class="tg"><span>제품 광고</span><span>숏폼 소재</span><span>광고 운영</span></div></div></div>
-    <div class="case"><div><i>CASE B</i><h3>브랜드 리뉴얼</h3></div><div><p>달라진 브랜드의 이야기와 메시지를 브랜드 필름으로 정리하고, 홈페이지·SNS·광고 매체에 맞는 규격으로 확장해 일관된 인상을 만듭니다.</p><div class="tg"><span>브랜드 필름</span><span>매체별 소재</span><span>메시지 설계</span></div></div></div>
-    <div class="case"><div><i>CASE C</i><h3>해외 시장 진출</h3></div><div><p>목표 시장의 언어와 문화에 맞춘 다국어 AI 콘텐츠를 제작하고, 해외 타깃 광고와 국제운송·물류 상담까지 연계해 수출 준비를 돕습니다.</p><div class="tg"><span>다국어 콘텐츠</span><span>해외 타깃 광고</span><span>물류 상담 연계</span></div></div></div>
-    <div class="case"><div><i>CASE D</i><h3>온라인 광고 시작</h3></div><div><p>어떤 매체에서 누구에게 보여줄지부터 함께 정하고, 노출 환경에 맞는 소재를 제작해 집행합니다. 결과를 보며 소재와 운영 방향을 조정합니다.</p><div class="tg"><span>매체 설계</span><span>캠페인 집행</span><span>분석·개선</span></div></div></div>
-  </div>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>08 / 11</span></div>
-</section>
-
-<!-- 07 EXPERIENCE -->
-<section class="page">
-  <div class="hd"><b>THE K</b><span>04 / SELECTED TEAM PROJECTS</span></div>
+<!-- 05 EXPERIENCE & CONTACT -->
+<section class="page c lp">
+  <div class="hd"><b>THE K</b><span>04 / EXPERIENCE &amp; CONTACT</span></div>
   <div class="eyebrow">EXPERIENCE</div>
   <h1>다양한 현장의 경험을,<br>브랜드의 다음 장면으로.</h1>
-  <p class="lead">VFX, 버추얼 프로덕션, 브랜드 광고, 실감형 콘텐츠. THE K 홈페이지에 소개된 팀 참여 프로젝트입니다.</p>
   <div class="wk">
-    <div><img src="assets/brandad.jpg" alt=""><i>BRAND AD</i><h3>브랜드 광고</h3><p>블랙야크 「히마다운」<br>아이유 · 손석구</p></div>
-    <div><img src="assets/vfx.jpg" alt=""><i>VFX</i><h3>드라마·영화 제작사 팀 VFX</h3><p>넷플릭스 「원더풀스」 VFX<br>박은빈 · 차은우</p></div>
-    <div><img src="assets/stage.jpg" alt=""><i>VIRTUAL PRODUCTION</i><h3>방송·버추얼 프로덕션</h3><p>버추얼 아이돌 skinz<br>「인기가요」 무대 배경 제작</p></div>
-    <div><img src="assets/baekje.jpg" alt=""><i>IMMERSIVE CONTENT</i><h3>공간·실감형 콘텐츠</h3><p>공주시 백제문화전당<br>「빛으로 잇는 시간, 백제」</p></div>
+    <div><img src="assets/brandad.jpg" alt=""><i>BRAND AD</i><h3>브랜드 광고</h3><p>블랙야크 「히마다운」 · 아이유 · 손석구</p></div>
+    <div><img src="assets/vfx.jpg" alt=""><i>VFX</i><h3>드라마·영화 제작사 팀 VFX</h3><p>넷플릭스 「원더풀스」 · 박은빈 · 차은우</p></div>
+    <div><img src="assets/stage.jpg" alt=""><i>VIRTUAL PRODUCTION</i><h3>방송·버추얼 프로덕션</h3><p>버추얼 아이돌 skinz 「인기가요」 무대 배경</p></div>
+    <div><img src="assets/baekje.jpg" alt=""><i>IMMERSIVE CONTENT</i><h3>공간·실감형 콘텐츠</h3><p>공주시 백제문화전당 「빛으로 잇는 시간, 백제」</p></div>
   </div>
-  <p class="note">※ 팀 참여 이력 기준이며, 프로젝트별 참여 범위는 상담 시 안내합니다. 상표·작품명은 각 권리자에게 귀속됩니다.</p>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>09 / 11</span></div>
-</section>
-
-<!-- FAQ -->
-<section class="page">
-  <div class="hd"><b>THE K</b><span>05 / FAQ</span></div>
-  <div class="eyebrow">FREQUENTLY ASKED</div>
-  <h1>상담 전에<br>자주 물어보시는 내용.</h1>
-  <div class="faq">
-    <div class="q"><b>영상 제작만 따로 의뢰할 수 있나요?</b><p>네. 기획·제작·광고 운영 중 필요한 범위만 선택해 진행할 수 있습니다. 상담 때 현재 단계를 알려주시면 알맞은 범위를 제안드립니다.</p></div>
-    <div class="q"><b>생성형 AI로 만든 영상은 품질이 괜찮나요?</b><p>AI는 표현의 가능성을 넓히고 제작을 돕는 도구입니다. 콘셉트 설계와 연출, 최종 검수는 THE K의 기획자와 제작진이 직접 진행합니다.</p></div>
-    <div class="q"><b>견적과 일정은 어떻게 정해지나요?</b><p>영상의 길이·수량, 매체, 광고 운영 여부에 따라 달라집니다. 상담에서 브랜드·목표·일정·예산을 확인한 뒤 범위에 맞춰 견적과 일정을 제안드립니다.</p></div>
-    <div class="q"><b>수출을 준비 중인데 어디까지 도와주나요?</b><p>다국어 홍보 콘텐츠 제작, 해외 타깃 광고, 국제운송·물류 상담 연계까지 검토합니다. 상품과 목적지에 따라 범위가 달라 상담 후 안내드립니다.</p></div>
-    <div class="q"><b>상담은 어떻게 신청하나요?</b><p>hello@thekplan.net 으로 브랜드와 목표, 희망 일정을 보내주시거나 thekplan.net 을 통해 문의해 주세요.</p></div>
-  </div>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>10 / 11</span></div>
-</section>
-
-<!-- 08 CONTACT -->
-<section class="page">
-  <div class="hd"><b>THE K</b><span>05 / CONTACT</span></div>
-  <div class="eyebrow">LET'S WORK TOGETHER</div>
-  <h1>브랜드의 다음 장면,<br>함께 만들어볼까요?</h1>
-  <p class="lead">만들고 싶은 영상, 알리고 싶은 상품, 해결하고 싶은 고민. 현재 단계부터 들려주세요. 필요한 실행 범위를 함께 정리합니다.</p>
-  <div class="ct">
-    <div class="r"><i>01</i><b>문의 접수</b><span>이메일 또는 홈페이지로 브랜드·목표·일정을 보내주세요.</span></div>
-    <div class="r"><i>02</i><b>상담</b><span>필요한 범위와 방향을 함께 정리합니다.</span></div>
-    <div class="r"><i>03</i><b>제안</b><span>콘셉트와 제작·운영 범위, 일정과 예산안을 제안드립니다.</span></div>
-  </div>
-  <div class="vals" style="margin-top:12mm;grid-template-columns:1fr 1fr">
-    <div class="val"><i>PREPARE</i><h3>문의 전 준비하면 좋은 내용</h3><p>브랜드·상품 소개 / 알리고 싶은 대상 / 희망 일정과 대략적인 예산 / 참고하고 싶은 영상이나 광고</p></div>
-    <div class="val"><i>NOTICE</i><h3>안내 사항</h3><p>제작 범위와 견적은 상담 후 프로젝트에 맞춰 제안드립니다. 상담 내용은 외부에 공개하지 않습니다.</p></div>
+  <p class="note">※ THE K 홈페이지에 소개된 팀 참여 이력 기준이며, 프로젝트별 참여 범위는 상담 시 안내합니다. 상표·작품명은 각 권리자에게 귀속됩니다.</p>
+  <div class="stp">
+    <div><i>01</i><b>상담</b>브랜드·목표·일정·예산 확인</div>
+    <div><i>02</i><b>기획</b>콘셉트·메시지·범위 협의</div>
+    <div><i>03</i><b>제작</b>스토리보드·영상·광고 소재</div>
+    <div><i>04</i><b>집행·검토</b>캠페인 운영·개선 논의</div>
   </div>
   <div class="card">
     <div>
@@ -351,7 +315,7 @@ th{width:24mm;font-weight:700;color:var(--ink)}td{color:#3d3d3a}
     </div>
     <div><div class="q"><img src="assets/qr.svg" alt="QR"></div><small>홈페이지 · 포트폴리오</small></div>
   </div>
-  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>11 / 11</span></div>
+  <div class="ft"><span>THEKPLAN.NET</span><span>COMPANY BROCHURE</span><span>05 / 05</span></div>
 </section>
 
 </body>
