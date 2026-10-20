@@ -35,6 +35,5 @@
 ---
 hello@thekplan.net · thekplan.net · 주식회사 THE-K
 
-*AI는 도구, 전략은 사람의 몫.*
 
 <!-- 메모: w-kpop.com 직접 확인 불가 → 언론 보도 기반. 언어 구성·채널은 사이트 확인 후 보정 -->
