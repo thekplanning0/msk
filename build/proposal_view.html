@@ -1,0 +1,90 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>월드케이팝센터 × THE K</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<style>
+/* Two stacked sheets that mirror the PDF: dark hook cover, light pilot page. Single committed look, brand lime on near-black. */
+:root{--ink:#161616;--lime:#E5EE78;--paper:#F6F4EF;--line:#d6d3cb;--mute:#666;--grid:rgba(255,255,255,.05);--stage:#0d0d0d;
+--font:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--stage);color:#fff;font-family:var(--font);padding-block:24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.sheet{position:relative;overflow:hidden;padding:clamp(20px,5vw,44px)}
+.dark{background:var(--ink);color:#fff;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;min-height:min(1100px,150vw);display:flex;flex-direction:column}
+.light{background:var(--paper);color:var(--ink)}
+.logo{font-weight:800;font-size:clamp(20px,4vw,28px);letter-spacing:1px;line-height:1}
+.logo small{display:block;font-size:8px;letter-spacing:4px;font-weight:500;margin-top:4px}
+.block{position:absolute;right:0;top:0;width:clamp(120px,28vw,220px);aspect-ratio:3/3.6;background:var(--lime);color:var(--ink);padding:clamp(18px,4vw,40px) clamp(14px,3vw,32px);text-align:right;font-size:clamp(9px,1.5vw,11px);font-weight:800;letter-spacing:3px;line-height:1.8}
+.tag{font-size:clamp(9px,1.5vw,11px);font-weight:800;letter-spacing:3px;color:var(--lime);margin-top:clamp(70px,16vw,150px)}
+h1{font-weight:800;line-height:1.22;letter-spacing:-.03em;font-size:clamp(34px,8vw,64px);margin:16px 0 0;text-wrap:balance}
+h1 span,.lime{color:var(--lime)}
+.sub{margin-top:28px;border-left:3px solid var(--lime);padding-left:16px;font-size:clamp(14px,2.4vw,18px);line-height:1.7;font-weight:500}
+.big{margin-top:auto;padding-top:56px;font-weight:800;font-size:clamp(24px,5vw,38px);line-height:1.1;letter-spacing:-.01em}
+.foot{margin-top:28px;border-top:1px solid rgba(255,255,255,.3);padding-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:10px;letter-spacing:2px}
+.light .foot{border-top-color:#ccc;color:#555}
+.head{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--ink);padding-bottom:12px;font-size:11px;font-weight:800;letter-spacing:2px}
+.head span:last-child{color:var(--mute);font-weight:500}
+.eyebrow{margin-top:32px;font-size:11px;font-weight:800;letter-spacing:3px;display:flex;align-items:center;gap:14px}
+.eyebrow:before{content:"";width:40px;height:1px;background:var(--ink)}
+h2{font-size:clamp(26px,5.5vw,40px);font-weight:800;line-height:1.25;letter-spacing:-.03em;margin:12px 0 0;text-wrap:balance}
+.lead{font-size:15px;line-height:1.8;margin:14px 0 0;color:#333;max-width:62ch}
+.pilot{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px;margin-top:28px}
+table{width:100%;border-collapse:collapse;border-top:1px solid var(--ink)}
+td{padding:13px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.6;vertical-align:top}
+td:first-child{width:76px;font-weight:800}
+.callout{background:var(--lime);color:var(--ink);padding:22px 20px;display:flex;flex-direction:column;justify-content:flex-end;gap:36px;font-weight:800;font-size:22px;line-height:1.35;letter-spacing:-.02em}
+.callout small{font-size:10px;letter-spacing:3px}
+.langs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:28px}
+.langs div{border-top:2px solid var(--ink);padding-top:8px;font-size:13px;font-weight:700}
+.langs b{display:block;font-size:10px;letter-spacing:2px;color:#777;font-weight:800;margin-bottom:2px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px;padding:22px;background:var(--ink);color:#ddd}
+.steps div{font-size:13px;line-height:1.6}
+.steps b{display:block;font-size:10px;letter-spacing:3px;color:var(--lime);font-weight:800;margin-bottom:6px}
+.steps strong{display:block;font-size:16px;color:#fff;margin-bottom:4px}
+.cta{margin-top:24px;border:1px solid var(--ink);padding:22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.cta h3{margin:0;font-size:clamp(18px,3.4vw,22px);font-weight:800;letter-spacing:-.02em;line-height:1.4}
+.cta p{margin:0;font-size:13px;line-height:1.7}
+.cta mark{background:var(--lime);color:var(--ink);padding:1px 6px;font-weight:800}
+@media(max-width:620px){.pilot{grid-template-columns:minmax(0,1fr)}.callout{gap:20px}.steps{grid-template-columns:minmax(0,1fr)}.langs{grid-template-columns:repeat(3,minmax(0,1fr))}.cta p{text-align:left}}
+</style>
+
+<div class="wrap">
+ <section class="sheet dark">
+  <div class="block">PILOT PROPOSAL<br>2026</div>
+  <div class="logo">THE K<small>PRODUCTION</small></div>
+  <div class="tag">WORLD K-POP CENTER × THE K</div>
+  <h1>영상 1편을 기획하면,<br>5개 나라 버전이<br><span>나옵니다.</span></h1>
+  <div class="sub">촬영 없이. 나라별 제작팀 없이.<br>AI 다국어 숏폼, 2주 파일럿으로 먼저 보여드립니다.</div>
+  <div class="big">YOUR STAGE.<br><span class="lime">THEIR LANGUAGE.</span></div>
+  <div class="foot"><span>주식회사 THE-K</span><span>STRATEGY / CREATIVE / MEDIA</span><span>THEKPLAN.NET</span></div>
+ </section>
+
+ <section class="sheet light">
+  <div class="head"><span>THE K</span><span>PILOT / 센터 앰배서더 AI</span></div>
+  <div class="eyebrow">PILOT</div>
+  <h2>센터가 먼저 찾아갑니다,<br>팬의 언어로.</h2>
+  <p class="lead">중국·홍콩·일본·베트남으로 뻗어가는 월드케이팝센터에게 필요한 건 "각 나라 팬에게 그 나라 말로 직접 말 거는 콘텐츠"입니다. 하나의 기획으로 시작해 다국어 버전을 동시에 제작합니다.</p>
+  <div class="pilot">
+   <table>
+    <tr><td>무엇을</td><td>센터 소개 15~30초 숏폼 1편 → 5개 언어 버전</td></tr>
+    <tr><td>어떻게</td><td>현지 팬처럼 말하는 AI 모델이 언어·자막·표현을 현지화해 센터와 체험 프로그램을 소개</td></tr>
+    <tr><td>어디에</td><td>센터 SNS · 해외 파트너 채널 · 호텔 제휴 채널</td></tr>
+    <tr><td>기간</td><td>2주 (기획 3일 → 제작 7일 → 수정·납품 4일)</td></tr>
+    <tr><td>측정</td><td>국가별 조회·참여·문의 유입 → 반응 좋은 국가부터 타깃 광고로 확장</td></tr>
+   </table>
+   <div class="callout"><small>ONE FLOW</small><span>작게 시작하고,<br>반응 있는 곳부터<br>넓힙니다.</span></div>
+  </div>
+  <div class="langs">
+   <div><b>EN</b>English</div><div><b>ZH</b>中文</div><div><b>JA</b>日本語</div><div><b>VI</b>Tiếng Việt</div><div><b>TH</b>ภาษาไทย</div>
+  </div>
+  <div class="steps">
+   <div><b>FIRST MEETING</b><strong>샘플 15초 시연</strong>센터 소개를 3개 언어로 미리 제작해 보여드립니다.</div>
+   <div><b>PILOT</b><strong>2주 제작·납품</strong>5개 언어 숏폼과 국가별 성과 확인.</div>
+   <div><b>EXPAND</b><strong>성과 기반 확장</strong>글로벌 오디션 티저 · 팬 참여형 AI 체험 · 해외 타깃 광고.</div>
+  </div>
+  <div class="cta">
+   <h3>30분만 주세요.<br>샘플부터 보여드리겠습니다.</h3>
+   <p style="text-align:right"><mark>hello@thekplan.net</mark><br>thekplan.net<br>인천 연수구 송도미래로 30 D동 610호</p>
+  </div>
+  <div class="foot"><span>THEKPLAN.NET</span><span>AI는 도구, 전략은 사람의 몫.</span><span>2 / 2</span></div>
+ </section>
+</div>
