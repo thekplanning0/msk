@@ -1,0 +1,214 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>THE K 표준 제안서</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<style>
+/* Two stacked sheets that mirror the PDF: dark hook cover, light pilot page. Single committed look, brand lime on near-black. */
+:root{--ink:#161616;--lime:#E5EE78;--paper:#F6F4EF;--line:#d6d3cb;--mute:#666;--grid:rgba(255,255,255,.05);--stage:#0d0d0d;
+--font:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--stage);color:#fff;font-family:var(--font);padding-block:24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.sheet{position:relative;overflow:hidden;padding:clamp(20px,5vw,44px)}
+.dark{background:var(--ink);color:#fff;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px;min-height:min(1100px,150vw);display:flex;flex-direction:column}
+.light{background:var(--paper);color:var(--ink)}
+.logo{font-weight:800;font-size:clamp(20px,4vw,28px);letter-spacing:1px;line-height:1}
+.logo small{display:block;font-size:8px;letter-spacing:4px;font-weight:500;margin-top:4px}
+.block{position:absolute;right:0;top:0;width:clamp(120px,28vw,220px);aspect-ratio:3/3.6;background:var(--lime);color:var(--ink);padding:clamp(18px,4vw,40px) clamp(14px,3vw,32px);text-align:right;font-size:clamp(9px,1.5vw,11px);font-weight:800;letter-spacing:3px;line-height:1.8}
+.tag{font-size:clamp(9px,1.5vw,11px);font-weight:800;letter-spacing:3px;color:var(--lime);margin-top:clamp(70px,16vw,150px)}
+h1{font-weight:800;line-height:1.22;letter-spacing:-.03em;font-size:clamp(34px,8vw,64px);margin:16px 0 0;text-wrap:balance}
+h1 span,.lime{color:var(--lime)}
+.sub{margin-top:28px;border-left:3px solid var(--lime);padding-left:16px;font-size:clamp(14px,2.4vw,18px);line-height:1.7;font-weight:500}
+.big{margin-top:auto;padding-top:56px;font-weight:800;font-size:clamp(24px,5vw,38px);line-height:1.1;letter-spacing:-.01em}
+.foot{margin-top:28px;border-top:1px solid rgba(255,255,255,.3);padding-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:10px;letter-spacing:2px}
+.light .foot{border-top-color:#ccc;color:#555}
+.head{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--ink);padding-bottom:12px;font-size:11px;font-weight:800;letter-spacing:2px}
+.head span:last-child{color:var(--mute);font-weight:500}
+.eyebrow{margin-top:32px;font-size:11px;font-weight:800;letter-spacing:3px;display:flex;align-items:center;gap:14px}
+.eyebrow:before{content:"";width:40px;height:1px;background:var(--ink)}
+h2{font-size:clamp(26px,5.5vw,40px);font-weight:800;line-height:1.25;letter-spacing:-.03em;margin:12px 0 0;text-wrap:balance}
+.lead{font-size:15px;line-height:1.8;margin:14px 0 0;color:#333;max-width:62ch}
+.pilot{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:24px;margin-top:28px}
+table{width:100%;border-collapse:collapse;border-top:1px solid var(--ink)}
+td{padding:13px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.6;vertical-align:top}
+td:first-child{width:76px;font-weight:800}
+.callout{background:var(--lime);color:var(--ink);padding:22px 20px;display:flex;flex-direction:column;justify-content:flex-end;gap:36px;font-weight:800;font-size:22px;line-height:1.35;letter-spacing:-.02em}
+.callout small{font-size:10px;letter-spacing:3px}
+.langs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:28px}
+.langs div{border-top:2px solid var(--ink);padding-top:8px;font-size:13px;font-weight:700}
+.langs b{display:block;font-size:10px;letter-spacing:2px;color:#777;font-weight:800;margin-bottom:2px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:28px;padding:22px;background:var(--ink);color:#ddd}
+.steps div{font-size:13px;line-height:1.6}
+.steps b{display:block;font-size:10px;letter-spacing:3px;color:var(--lime);font-weight:800;margin-bottom:6px}
+.steps strong{display:block;font-size:16px;color:#fff;margin-bottom:4px}
+.cta{margin-top:24px;border:1px solid var(--ink);padding:22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.cta h3{margin:0;font-size:clamp(18px,3.4vw,22px);font-weight:800;letter-spacing:-.02em;line-height:1.4}
+.cta p{margin:0;font-size:13px;line-height:1.7}
+.cta mark{background:var(--lime);color:var(--ink);padding:1px 6px;font-weight:800}
+@media(max-width:620px){.pilot{grid-template-columns:minmax(0,1fr)}.callout{gap:20px}.steps{grid-template-columns:minmax(0,1fr)}.langs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.qr{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:10px;letter-spacing:2px;font-weight:800;color:var(--ink)}.qr svg{width:88px;height:88px;display:block}
+
+.p3{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px}
+.head3{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:12px;font-size:11px;font-weight:800;letter-spacing:2px}
+.head3 span:last-child{color:#aaa;font-weight:500}
+.tag3{margin-top:36px;font-size:11px;font-weight:800;letter-spacing:3px;color:var(--lime)}
+.h3t{font-size:clamp(26px,5.5vw,40px);font-weight:800;line-height:1.25;letter-spacing:-.03em;margin:12px 0 0;text-wrap:balance}
+.lead3{font-size:15px;line-height:1.8;margin:14px 0 0;color:#d4d4d0;max-width:62ch}
+.pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:36px}
+.pillars>div{border-top:2px solid var(--lime);padding-top:14px}
+.pillars b{display:block;font-size:10px;letter-spacing:3px;color:var(--lime);font-weight:800}
+.pillars strong{display:block;font-size:20px;font-weight:800;margin:6px 0 10px}
+.pillars ul{list-style:none;margin:0;padding:0}
+.pillars li{font-size:14px;line-height:1.6;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.18);color:#e6e6e2}
+.flow3{display:flex;align-items:center;gap:8px;margin-top:36px;flex-wrap:wrap}
+.flow3 div{flex:1 1 90px;text-align:center;border:1px solid rgba(255,255,255,.35);padding:14px 4px;font-size:14px;font-weight:700}
+.flow3 i{font-style:normal;color:var(--lime);font-weight:800}
+.oneflow{margin-top:36px;background:var(--lime);color:var(--ink);padding:26px 24px;font-size:clamp(18px,3.6vw,24px);font-weight:800;line-height:1.4;letter-spacing:-.02em}
+@media(max-width:620px){.pillars{grid-template-columns:minmax(0,1fr)}}
+
+.sheet{min-height:0}
+.dark{min-height:0;display:block}
+a{color:inherit;text-decoration:none}
+.eyebrow2{margin-top:32px;font-size:11px;font-weight:800;letter-spacing:3px;display:flex;align-items:center;gap:14px}.eyebrow2:before{content:"";width:40px;height:1px;background:currentColor}
+.dark .eyebrow2{color:var(--lime)}
+.hd{display:flex;justify-content:space-between;gap:12px;padding-bottom:12px;font-size:11px;font-weight:800;letter-spacing:2px;border-bottom:1px solid currentColor}.hd span:last-child{opacity:.6;font-weight:500}
+.tbl{overflow-x:auto;margin-top:18px}
+.tbl table{min-width:480px}
+.dark table{border-top:2px solid var(--lime)}
+.light table{border-top:1px solid var(--ink)}
+th{text-align:left;font-size:10px;letter-spacing:2px;font-weight:800;padding:12px 12px 12px 0}
+.dark th{color:var(--lime)}
+.dark td,.dark th{border-bottom:1px solid rgba(255,255,255,.2)}
+.light td{border-bottom:1px solid var(--line)}
+td{padding:13px 12px 13px 0}
+.dark td{color:#e6e6e2}
+h3.s{font-size:18px;font-weight:800;margin:36px 0 10px;letter-spacing:-.02em}
+p.tx{font-size:14px;line-height:1.8;margin:12px 0 0;max-width:64ch}
+.dark p.tx{color:#d4d4d0}.light p.tx{color:#333}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:12px}
+.cols div{border-top:2px solid var(--ink);padding-top:12px;font-size:13px;line-height:1.65;color:#333}
+.cols b{display:block;font-size:15px;color:var(--ink);margin-bottom:4px}
+.cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:12px}
+.cases a{display:block;border:1px solid rgba(255,255,255,.3);padding:16px}
+.cases a:hover,.cases a:focus-visible{border-color:var(--lime)}
+.cases b{display:block;font-size:10px;letter-spacing:2px;color:var(--lime);font-weight:800;margin-bottom:6px}
+.cases strong{display:block;font-size:16px;margin-bottom:4px}
+.cases span{display:block;font-size:13px;color:#ccc;line-height:1.5}
+.cases em{display:block;margin-top:8px;font-style:normal;font-size:11px;font-weight:800;color:var(--lime);letter-spacing:1px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:12px}
+.stats div{background:var(--lime);color:var(--ink);padding:18px 16px;font-size:13px;line-height:1.5;font-weight:500}
+.stats b{display:block;font-size:20px;font-weight:800;letter-spacing:-.02em;margin-bottom:4px;line-height:1.25}
+.cta2{margin-top:32px;border:1px solid var(--ink);padding:22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.cta2 p{margin:0;font-size:13px;line-height:1.7}
+.cta2 mark{background:var(--lime);color:var(--ink);padding:1px 6px;font-weight:800}
+.qr{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:10px;letter-spacing:2px;font-weight:800;color:var(--ink)}.qr svg{width:88px;height:88px;display:block}
+.tdh{width:150px}td,th{color:inherit}.dark td{color:#e6e6e2}
+@media(max-width:620px){.cols,.stats,.cases{grid-template-columns:minmax(0,1fr)}.tdh{width:110px}}
+</style>
+<div class="wrap">
+<section class="sheet dark">
+ 
+ <div class="logo">THE K<small>PRODUCTION</small></div>
+ <div class="tag">VIDEO &amp; AD CONTENT</div>
+ <h1>THE K<br>영상 및 광고<br><span class="lime">콘텐츠 제작 제안서</span></h1>
+ <div class="sub">기업과 제품의 강점을 고객이 쉽게 이해하도록,<br>영상으로 전달합니다.</div>
+ <div class="eyebrow2">PROPOSAL</div>
+ <div class="tbl"><table>
+  <tr><th>필요한 일</th><th>제공하는 콘텐츠</th><th>활용</th></tr>
+  <tr><td>기업·브랜드 소개</td><td>브랜드의 이야기와 강점을 담은 브랜드필름</td><td>홈페이지 · 영업 자료 · 전시회</td></tr>
+  <tr><td>제품·서비스 설명</td><td>특징과 사용 방법을 보여주는 영상</td><td>영업 · 고객 안내</td></tr>
+  <tr><td>짧은 광고</td><td>핵심 장면과 문구를 담은 숏폼·광고 소재</td><td>SNS · 온라인 홍보</td></tr>
+  <tr><td>해외 고객 대상 홍보</td><td>외국어 자막과 음성 해설을 담은 영상</td><td>해외 바이어 상담 · 전시회</td></tr>
+ </table></div>
+ <p class="tx">수출을 준비하는 기업에는 영상 제작과 함께 국제운송·물류 지원까지 연계합니다.</p>
+ 
+</section>
+<section class="sheet light">
+ <div class="hd"><span>THE K</span><span>제작 방향</span></div>
+ <div class="eyebrow2">DIRECTION</div>
+ <h2>정보는 줄이고,<br>장점은 선명하게.</h2>
+ <p class="tx">제품 설명이 길거나 정보가 여러 자료에 흩어져 있으면 고객은 핵심 장점을 이해하기 어렵습니다. THE K는 필요한 내용을 정리하고, 실제 특징과 사용 모습을 영상으로 전달합니다. 글로 전하기 어려운 내용은 제품 모습과 사용 장면으로 보여드립니다.</p>
+
+ <h3 class="s">활용 장소에 맞는 표현</h3>
+ <div class="tbl"><table>
+  <tr><td class="tdh">홈페이지·기업 소개</td><td>회사의 정체성과 주요 사업을 한눈에 이해할 수 있는 구성</td></tr>
+  <tr><td>영업·고객 상담</td><td>제품·서비스의 특징과 사용 이유를 구체적으로 설명</td></tr>
+  <tr><td>전시회</td><td>소리 없이 보더라도 이해할 수 있는 화면과 자막</td></tr>
+  <tr><td>SNS</td><td>짧은 시간 안에 관심을 끌고 핵심을 전달하는 장면</td></tr>
+  <tr><td>해외 바이어 상담</td><td>제품 용어와 설명을 대상 언어에 맞게 표현</td></tr>
+ </table></div>
+
+ <h3 class="s">제작 원칙</h3>
+ <div class="cols">
+  <div><b>핵심부터 쉽게</b>고객이 가장 먼저 알아야 할 내용 중심으로 대본과 장면을 구성합니다.</div>
+  <div><b>사실에 근거</b>수치·인증·기능 문구는 고객이 제공한 자료와 대조합니다. AI로 만든 장면도 제품의 형태와 특징이 정확한지 확인합니다.</div>
+  <div><b>브랜드 일관성</b>로고·색상·문구를 모든 영상에 일관되게 적용합니다.</div>
+ </div>
+
+ <h3 class="s">해외 홍보 동영상</h3>
+ <p class="tx">해외 구매 담당자가 이해해야 할 기업·제품 정보를 대상 언어로 전달합니다. 제품명과 기술 용어를 일관되게 사용하고, 전시·상담 현장에서 소리 없이 시청해도 이해할 수 있도록 화면과 자막을 구성합니다.</p>
+ 
+</section>
+<section class="sheet dark">
+ <div class="hd"><span>THE K</span><span>제작 역량</span></div>
+ <div class="eyebrow2">CAPABILITY</div>
+ <h2>브랜드필름부터<br><span class="lime">수출 물류까지.</span></h2>
+ <p class="tx">영상 기획과 장면 구성, AI를 활용한 이미지·영상 표현, 편집·자막·음향까지 한 팀이 완성합니다.</p>
+
+ <h3 class="s">공개 영상 사례</h3>
+ <div class="cases">
+  <a href="https://www.youtube.com/watch?v=xo-Xh4GIe8E"><b>BRAND FILM</b><strong>새출발 회생</strong><span>서비스의 메시지를 이야기로 표현</span><em>영상 보기 ↗</em></a>
+  <a href="https://www.youtube.com/watch?v=kgz-rZ0IPAY"><b>LOGISTICS FILM</b><strong>국제 특송 물류의 기준</strong><span>물류 서비스와 산업 현장 표현</span><em>영상 보기 ↗</em></a>
+  <a href="https://www.youtube.com/shorts/c0Efl5Y77C8"><b>PRODUCT FILM</b><strong>ALL AUTO PARTS</strong><span>자동차 부품 관련 브랜드 표현</span><em>영상 보기 ↗</em></a>
+  <a href="https://www.youtube.com/shorts/P4aOrQh8BHw"><b>MULTILINGUAL AI</b><strong>Multilingual AI Review</strong><span>여러 언어를 활용한 콘텐츠 표현</span><em>영상 보기 ↗</em></a>
+ </div>
+
+ <h3 class="s">제작 분야</h3>
+ <div class="tbl"><table>
+  <tr><td class="tdh">기획과 연출</td><td>브랜드의 핵심 내용, 영상 주제, 대본과 장면 구성</td></tr>
+  <tr><td>제작과 편집</td><td>장면 표현, 화면 연결, 색감, 자막, 음향</td></tr>
+  <tr><td>해외 홍보 콘텐츠</td><td>외국어 대본·자막·음성 해설과 제품 용어 검수</td></tr>
+ </table></div>
+
+ <h3 class="s">수출 물류 연계 역량</h3>
+ <p class="tx">기존에 운영해 온 포워딩 회사의 국제운송·물류 지원을 수출 준비 기업에 연계합니다.</p>
+ <div class="stats">
+  <div><b>국제물류주선업</b>등록 기업</div>
+  <div><b>연 300건+</b>자기 명의 선하증권(B/L)·항공운송장(AWB) 발행</div>
+  <div><b>배상책임보험</b>화물배상책임보험 가입</div>
+ </div>
+ 
+</section>
+<section class="sheet light">
+ <div class="hd"><span>THE K</span><span>품질 확인 · 사후 관리</span></div>
+ <div class="eyebrow2">QUALITY</div>
+ <h2>납품 전에 확인하고,<br>납품 후에도 보완합니다.</h2>
+
+ <h3 class="s">품질 확인</h3>
+ <div class="tbl"><table>
+  <tr><td class="tdh">제품 정보와 문구</td><td>제품명·수치·기능·연락처 등이 제공 자료와 일치하는지 확인</td></tr>
+  <tr><td>화면과 자막</td><td>화면 크기, 글자 잘림, 자막 오탈자, 장면 연결 확인</td></tr>
+  <tr><td>음향</td><td>음성 누락, 음악과 음성의 균형, 불필요한 소음 확인</td></tr>
+  <tr><td>외국어 표현</td><td>제품 용어와 자막·음성 해설의 내용 일치 확인</td></tr>
+  <tr><td>납품 파일</td><td>파일 재생 여부와 합의한 형식·해상도 확인</td></tr>
+ </table></div>
+
+ <h3 class="s">납품 후 지원</h3>
+ <div class="tbl"><table>
+  <tr><td class="tdh">보완 대상</td><td>자막 오탈자, 음성 누락, 재생 오류, 합의한 규격과의 불일치 등 제작상 문제</td></tr>
+  <tr><td>별도 요청</td><td>새로운 영상 주제, 추가 언어·규격, 제품 정보 변경에 따른 개편은 새로운 제작 요청으로 구분</td></tr>
+ </table></div>
+
+ <h3 class="s">기대 효과</h3>
+ <div class="cols">
+  <div><b>브랜드 이해 향상</b>기업의 이야기와 주요 사업을 하나의 영상으로 소개합니다.</div>
+  <div><b>홍보 자료 활용 확대</b>홈페이지·영업·전시·SNS에 맞는 영상으로 활용합니다.</div>
+  <div><b>해외 고객과의 소통</b>외국어 자막과 음성 해설로 기업·제품 정보를 전달합니다.</div>
+ </div>
+
+ <div class="cta2">
+  <p><mark>hello@thekplan.net</mark><br>thekplan.net<br>인천 연수구 송도미래로 30 D동 610호</p>
+  <a class="qr" href="https://thekplan.net/"><svg viewBox="0 0 25 25" shape-rendering="crispEdges" viewBox="0 0 25 25" class="segno"><path class="qrline" stroke="#161616" d="M0 0.5h7m2 0h2m3 0h1m3 0h7m-25 1h1m5 0h1m5 0h3m3 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m2 0h1m2 0h3m3 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m2 0h5m2 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m2 0h3m1 0h2m1 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m1 0h1m5 0h1m3 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-17 1h1m2 0h2m1 0h3m-16 1h2m3 0h1m5 0h1m3 0h1m1 0h2m1 0h1m-21 1h2m8 0h1m2 0h3m1 0h2m1 0h1m1 0h2m-22 1h1m2 0h2m1 0h5m1 0h1m1 0h1m1 0h4m1 0h1m-25 1h3m1 0h1m3 0h4m7 0h1m1 0h1m-22 1h2m1 0h1m1 0h3m3 0h1m1 0h4m1 0h1m5 0h1m-22 1h3m1 0h1m3 0h2m2 0h2m1 0h2m3 0h2m-25 1h4m1 0h2m2 0h1m2 0h2m1 0h2m1 0h1m2 0h2m1 0h1m-21 1h2m1 0h3m2 0h3m1 0h2m1 0h3m-22 1h4m2 0h1m4 0h1m1 0h2m1 0h5m2 0h1m-16 1h2m1 0h3m2 0h1m3 0h1m3 0h1m-25 1h7m3 0h1m2 0h2m1 0h1m1 0h1m1 0h1m3 0h1m-25 1h1m5 0h1m2 0h1m1 0h2m2 0h2m3 0h1m-21 1h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m1 0h6m3 0h1m-25 1h1m1 0h3m1 0h1m2 0h1m2 0h1m4 0h1m2 0h1m1 0h2m-24 1h1m1 0h3m1 0h1m1 0h2m2 0h1m2 0h3m1 0h3m1 0h2m-25 1h1m5 0h1m1 0h2m1 0h3m1 0h2m1 0h3m-21 1h7m4 0h1m1 0h1m2 0h1m4 0h1m2 0h1"/></svg><span>HOMEPAGE</span></a>
+ </div>
+ 
+</section>
+</div>
